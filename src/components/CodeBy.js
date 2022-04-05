@@ -1,7 +1,7 @@
 import React from "react";
 // import "./styles/CodeBy.css";
 
-export default function Footer() {
+export default function CodeBy() {
   return (
     <div className="CodeBy">
       This project was coded by{" "}

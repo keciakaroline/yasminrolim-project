@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import logo from "../images/simbol.png";
 
 export default function Navbar() {
   const [click, setClick] = useState(false);
@@ -16,11 +17,7 @@ export default function Navbar() {
         <nav className="navbar" onClick={(event) => event.stopPropagation()}>
           <div className="nav-container">
             <span className="nav-logo">
-              <img
-                src="/src/images/simbol.png"
-                alt=""
-                className="img-nav-logo"
-              />
+              <img src={logo} alt="" className="img-nav-logo" />
               Yasmin Rolim
             </span>
             <ul className={click ? "nav-menu active" : "nav-menu"}>
