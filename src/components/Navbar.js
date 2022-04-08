@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../images/simbol.png";
+import logo from "../projImg/simbol.png";
 
 export default function Navbar() {
   const [click, setClick] = useState(false);

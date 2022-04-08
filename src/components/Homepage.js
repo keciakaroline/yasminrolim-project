@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "../images/yasmin-profile.png";
+import profile from "../projImg/yasmin-profile.png";
 import CodeBy from "./CodeBy";
 import Presentation from "./Presentation";
 
