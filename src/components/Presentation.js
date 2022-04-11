@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useCallback } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import PhotoLibraryIcon from "@mui/icons-material/PhotoLibrary";
-import { HashLink } from "react-router-hash-link";
 import { NavLink } from "react-router-dom";
 import "./styles/Presentation.css";
+import Projects from "./Projects";
 
 function importAll(require) {
   let images = {};
@@ -17,6 +17,8 @@ export default function Presentation() {
   const [model, setModel] = useState(false);
   const [tempImgSrc, setTempImgSrc] = useState("");
   const [images, setImages] = useState({});
+  const [newImages, setNewImages] = useState({});
+  const [miniImages, setMiniImages] = useState("");
 
   useEffect(() => {
     const tmpImages = importAll(
@@ -25,6 +27,13 @@ export default function Presentation() {
     //console.log(tmpImages);
     setImages(tmpImages);
   }, []);
+
+  // useEffect(() => {
+  //   const moreImages = importAll(
+  //     require.context("../projImg", false, /\.(png|jpe?g|svg)$/)
+  //   );
+  //   setNewImages(moreImages);
+  // }, []);
 
   const getImg = useCallback(
     (index) => {
@@ -45,27 +54,29 @@ export default function Presentation() {
               onClick={() => getImg(index)}
               className="img-fluid img-project"
             />
-            <HashLink to={`/projects/${index}`} className="btn btn-primary">
-              Teste 01
-            </HashLink>
-            <a href={`/projects/${index}`} className="btn btn-primary">
-              Teste 02
-              <PhotoLibraryIcon />
-              {/* <i className="fas fa-long-arrow-alt-right"></i> */}
-            </a>
-            <NavLink
-              exact
-              to={`/projects/${index}`}
-              className="btn btn-primary"
-            >
-              Teste 03
-            </NavLink>
+
+            <div className={model ? "model open" : "model"}>
+              <img src={tempImgSrc} alt="" className="big-image" />
+              <Projects />
+
+              <CloseIcon
+                className="close-icon"
+                onClick={() => setModel(false)}
+              />
+              {/* {Object.keys(newImages).map((index) => (
+                <img src={newImages[index]} />
+              ))} */}
+              <NavLink
+                exact
+                to={`/projects/${index}`}
+                className="btn btn-primary"
+              >
+                Teste 03
+                <PhotoLibraryIcon />
+              </NavLink>
+            </div>
           </>
         ))}
-      </div>
-      <div className={model ? "model open" : "model"}>
-        <img src={tempImgSrc} alt="" />
-        <CloseIcon className="close-icon" onClick={() => setModel(false)} />
       </div>
     </>
   );

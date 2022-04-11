@@ -1,0 +1,14 @@
+.Projects .small-images img {
+  /* display: flex;
+  width: 25%;
+  height: 30%;
+  flex-direction: column;
+  flex-wrap: wrap; */
+  -webkit-column-count: 1;
+  -moz-column-count: 1;
+  column-count: 1;
+  -webkit-column-width: 100%;
+  -moz-column-width: 100%;
+  column-width: 100%;
+  padding: 10px 12px;
+}

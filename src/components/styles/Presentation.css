@@ -64,7 +64,7 @@
   transform: scale(1);
 }
 
-.model img {
+.model .big-image img {
   width: auto;
   max-width: 100%;
   height: auto;
@@ -86,15 +86,4 @@
   color: #fff;
   background-color: rgba(0, 0, 0, 0.4);
   cursor: pointer;
-}
-
-.model.open p {
-  color: #fff;
-  position: absolute;
-  z-index: 999;
-  margin: 0 auto;
-  right: 5%;
-  top: 30%; /* Adjust this value to move the positioned div up and down */
-  text-align: right;
-  width: 60%; /* Set the width of the positioned div */
 }

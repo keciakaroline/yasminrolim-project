@@ -32,6 +32,17 @@ export default function Navbar() {
                   Home
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink
+                  exact
+                  to="/projects"
+                  className="nav-link"
+                  onClick={click ? handleClick : null}
+                  activeClassName="active"
+                >
+                  Projetos
+                </NavLink>
+              </li>
             </ul>
             <div className="nav-icon" onClick={handleClick}>
               <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
