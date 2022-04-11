@@ -1,41 +1,53 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./styles/Presentation.css";
+import CloseIcon from "@mui/icons-material/Close";
+
+function importAll(require) {
+  let images = {};
+  require.keys().forEach((item) => {
+    images[item.replace("./", "")] = require(item);
+  });
+  return images;
+}
 
 export default function Presentation() {
-  function importAll(require) {
-    let images = {};
-    require.keys().forEach((item) => {
-      images[item.replace("./", "")] = require(item);
-    });
-    return images;
-  }
+  const [model, setModel] = useState(false);
+  const [tempimgsrc, setTempImgSrc] = useState("");
+  const [images, setImages] = useState({});
 
-  const images = importAll(
-    require.context("../faceImg", false, /\.(png|jpe?g|svg)$/)
+  useEffect(() => {
+    const tmpImages = importAll(
+      require.context("../faceImg", false, /\.(png|jpe?g|svg)$/)
+    );
+    //console.log(tmpImages);
+    setImages(tmpImages);
+  }, []);
+
+  const getImg = useCallback(
+    (index) => {
+      setTempImgSrc(images[index]);
+      setModel(true);
+    },
+    [images]
   );
 
-  // const [model, setModel] = useState(false);
-  // const [tempimgsrc, setTempImgSrc] = useState("");
-
-  //const getImg = (images) => {
-  //  setTempImgSrc(images);
-  //  setModel(true);
-  //};
   return (
     <>
-      {/* <div className={model ? "model open" : "model"}>
+      <div className={model ? "model open" : "model"}>
         <img src={tempimgsrc} alt="" />
-      </div> */}
+        <CloseIcon />
+      </div>
 
-      {/* <div className="Presentation" onClick={getImg}>
-        <img src={images["p1.jpg"]} alt="" className="img-fluid img-project" />
-      </div> */}
-
-      {images.map((item, index) => {
-        return (
-          <img src={item["p22.jpg"]} alt="" className="img-fluid img-project" />
-        );
-      })}
+      <div className="Presentation">
+        {Object.keys(images).map((index) => (
+          <img
+            src={images[index]}
+            alt=""
+            onClick={() => getImg(index)}
+            className="img-fluid img-project"
+          />
+        ))}
+      </div>
     </>
   );
 }
