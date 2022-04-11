@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
 import Navbar from "./components/Navbar";
 import Homepage from "./components/Homepage";
+import Projects from "./components/Projects";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <ScrollToTop>
         <Routes>
           <Route exact path="/" element={<Homepage />} />
-          {/* <Route exact path="/projects" element={<Projects />} /> */}
+          <Route exact path="/projects" element={<Projects />} />
           {/* <Route exact path="/about" element={<About />} /> */}
           {/* <Route exact path="/contact" element={<Contact />} /> */}
         </Routes>
