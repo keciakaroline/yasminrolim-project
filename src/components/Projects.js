@@ -1,42 +1,33 @@
 import React, { useState, useEffect, useCallback } from "react";
 import CodeBy from "./CodeBy";
 import { NavLink } from "react-router-dom";
-import Presentation from "./Presentation";
 import "./styles/Projects.css";
+// import dataImages from "./DataImages";
 
-function importAll(require) {
+function importAll(r) {
   let images = {};
-  require.keys().forEach((item) => {
-    images[item.replace("./", "")] = require(item);
+  r.keys().forEach((item) => {
+    images[item.replace("./", "")] = r(item);
   });
   return images;
 }
 
-export default function Projects({ index }) {
-  const [tempImgSrc, setTempImgSrc] = useState("");
-  const [images, setImages] = useState({});
-  const [newImages, setNewImages] = useState({});
-  const [miniImages, setMiniImages] = useState("");
+export default function Projects() {
+  const [projImages, setProjImages] = useState({});
 
   useEffect(() => {
-    const moreImages = importAll(
-      require.context("../projImg", false, /\.(png|jpe?g|svg)$/)
+    const newImages = importAll(
+      require.context("../images/ProjectImages", true, /\.(png|jpe?g|svg)$/)
     );
-    setNewImages(moreImages);
+    //console.log(newImages);
+    setProjImages(newImages);
   }, []);
 
   return (
     <div className="Projects" id="projects">
-      {/* {Object.keys(images).map((index) => (
-        <section>
-          <img src={images[index]} />
-        </section>
-      ))} */}
-      <section className="small-images">
-        <img src={newImages["p1_2.jpg"]} alt="" className="" />
-        <img src={newImages["p2.jpg"]} alt="" className="" />
-      </section>
-
+      {Object.keys(projImages).map((index) => (
+        <img src={projImages[index]} alt="" className="img-fluid" />
+      ))}
       {/* <NavLink exact to={`/`} className="btn btn-primary">
         Voltar
       </NavLink> */}
