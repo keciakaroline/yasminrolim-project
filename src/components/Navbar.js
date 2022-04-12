@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../images/simbol.png";
+import "./styles/Navbar.css";
 
 export default function Navbar() {
   const [click, setClick] = useState(false);
@@ -18,7 +19,7 @@ export default function Navbar() {
           <div className="nav-container">
             <span className="nav-logo">
               <img src={logo} alt="" className="img-nav-logo" />
-              Yasmin Rolim
+              <span>Yasmin Rolim</span>
             </span>
             <ul className={click ? "nav-menu active" : "nav-menu"}>
               <li className="nav-item">

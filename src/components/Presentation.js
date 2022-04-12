@@ -40,23 +40,26 @@ export default function Presentation() {
   return (
     <div className="Presentation">
       {Object.keys(images).map((index) => (
-        <img
-          src={images[index]}
-          alt=""
-          onClick={() => getImg(index)}
-          className="img-fluid"
-        />
-      ))}
+        <>
+          <img
+            src={images[index]}
+            alt=""
+            onClick={() => getImg(index)}
+            className="img-fluid"
+          />
 
-      <div className={model ? "model open" : "model"}>
-        <img src={tempImgSrc} alt="" className="big-image" />
-        <Projects />;{/* <ImageGallery items={dataImages.project_2} /> */}
-        <CloseIcon className="close-icon" onClick={() => setModel(false)} />
-        {/* <NavLink exact to={`/projects/${index}`} className="btn btn-primary">
+          <div className={model ? "model open" : "model"}>
+            {/* <h1>Name: {index}</h1> */}
+            <img src={tempImgSrc} alt="" className="big-image" />
+            <Projects />;{/* <ImageGallery items={dataImages.project_2} /> */}
+            <CloseIcon className="close-icon" onClick={() => setModel(false)} />
+            {/* <NavLink exact to={`/projects/${index}`} className="btn btn-primary">
             Teste 03
             <PhotoLibraryIcon />
           </NavLink> */}
-      </div>
+          </div>
+        </>
+      ))}
     </div>
   );
 }
