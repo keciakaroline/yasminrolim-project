@@ -1,28 +1,22 @@
-/* :root {
-  --font-title-text: "Nunito", sans-serif;
-  --font-italic: "Courgette", cursive;
-  --background-primary: #3f415a;
-  --background-body: #282a36;
-  --background-btn: #6a6577;
-  --color-primary-font: #e767b0;
-  --color-secondary-font: rgb(247, 247, 247);
-} */
-
 .CodeBy {
   text-align: center;
   padding: 30px 0px 10px 0px;
   font-size: 14px;
-  color: var(--background-body);
+  color: #1e2222;
 }
 
 .CodeBy a {
-  color: var(--color-primary-font);
+  color: rgb(188, 140, 19);
   text-decoration: none;
 }
 
 .CodeBy .social-link {
   text-align: center;
   font-size: 25px;
+}
+
+.CodeBy a:hover {
+  color: rgba(217, 79, 25, 0.886);
 }
 
 @media (max-width: 900px) {

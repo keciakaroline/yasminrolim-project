@@ -1,5 +1,5 @@
 .Homepage {
-  padding-top: 200px;
+  padding-top: 100px;
   background-image: url(https://img.freepik.com/fotos-gratis/textura-de-marmore-branca-do-panorama-para-o-projeto-decorativo-do-fundo-ou-do-assoalho-de-telhas_42682-513.jpg?w=2000);
   background-repeat: round;
   width: 100%;
@@ -8,7 +8,18 @@
 }
 
 header {
-  padding-bottom: 300px;
+  padding-bottom: 200px;
+}
+
+header img {
+  border-radius: 20px;
+  -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+    5px 3px 16px 12px rgba(0, 0, 0, 0.03);
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+    5px 3px 16px 12px rgba(0, 0, 0, 0.03);
+  width: 220px;
+  height: 220px;
+  margin-bottom: 40px;
 }
 
 .Homepage h3 {
@@ -18,11 +29,5 @@ header {
 .Homepage h1 {
   letter-spacing: 8px;
   font-weight: 700;
+  line-height: 80px;
 }
-
-/* .Homepage .container-fluid .profile {
-  width: 750px;
-  height: 700px;
-  object-fit: cover;
-  object-position: -20% -10%;
-} */

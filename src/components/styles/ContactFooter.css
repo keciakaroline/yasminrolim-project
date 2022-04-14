@@ -1,0 +1,33 @@
+.ContactFooter {
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  background-color: #1e2222;
+  color: aliceblue;
+  border: 1px solid #1e2222;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  margin-top: 50px;
+}
+
+.ContactFooter p {
+  text-align: center;
+  font-size: 24px;
+  background-color: #1e2222;
+  color: aliceblue;
+  border-radius: 7px;
+  border: 1px solid #1e2222;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.ContactFooter a {
+  font-family: "Lobster", cursive;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: rgb(242, 224, 65);
+}
+
+.ContactFooter a:hover {
+  color: rgba(217, 79, 25, 0.7);
+}

@@ -80,11 +80,15 @@ body {
   margin-bottom: -20px;
   transition: width 0.7s ease, background-color 0.5s ease;
 }
-/*
-.nav-item:hover:after {
+
+/* .nav-item:hover:after {
   width: 100%;
   background: aliceblue;
 } */
+
+.nav-link:hover {
+  color: rgba(212, 89, 40, 0.7);
+}
 
 .nav-item .active {
   color: rgb(242, 224, 65);
