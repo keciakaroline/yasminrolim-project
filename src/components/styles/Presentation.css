@@ -64,18 +64,6 @@
   transform: scale(1);
 }
 
-.model .big-image img {
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  max-height: 100%;
-  display: block;
-  line-height: 0;
-  box-sizing: border-box;
-  padding: 20px 0 20px;
-  margin: 0 auto;
-}
-
 .model.open .close-icon {
   position: fixed;
   top: 10px;

@@ -9,7 +9,7 @@ export default function Homepage() {
   return (
     <div className="Homepage">
       <header>
-        <img src={profile} alt="" />
+        <img src={profile} alt="Yasmin Rolim Profile" />
         <h1>Yasmin Rolim</h1>
         <h3>Arquitetura & Interiores</h3>
       </header>

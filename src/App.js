@@ -5,6 +5,8 @@ import ScrollToTop from "./ScrollToTop";
 import Navbar from "./components/Navbar";
 import Homepage from "./components/Homepage";
 import Projects from "./components/Projects";
+import Sobre from "./components/Sobre";
+import Contato from "./components/Contato";
 
 function App() {
   return (
@@ -14,8 +16,8 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Homepage />} />
           <Route exact path="/projects" element={<Projects />} />
-          {/* <Route exact path="/about" element={<About />} /> */}
-          {/* <Route exact path="/contact" element={<Contact />} /> */}
+          <Route exact path="/sobre" element={<Sobre />} />
+          <Route exact path="/contato" element={<Contato />} />
         </Routes>
       </ScrollToTop>
     </div>

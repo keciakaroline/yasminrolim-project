@@ -18,7 +18,7 @@ function importAll(r) {
 
 export default function Presentation() {
   const [model, setModel] = useState(false);
-  const [tempImgSrc, setTempImgSrc] = useState("");
+  const [selectedIndex, setSelectedIndex] = useState("");
   const [images, setImages] = useState({});
 
   useEffect(() => {
@@ -31,8 +31,8 @@ export default function Presentation() {
 
   const getImg = useCallback(
     (index) => {
-      setTempImgSrc(images[index]);
       setModel(true);
+      setSelectedIndex(index);
     },
     [images]
   );
@@ -47,19 +47,16 @@ export default function Presentation() {
             onClick={() => getImg(index)}
             className="img-fluid"
           />
-
-          <div className={model ? "model open" : "model"}>
-            {/* <h1>Name: {index}</h1> */}
-            <img src={tempImgSrc} alt="" className="big-image" />
-            <Projects />;{/* <ImageGallery items={dataImages.project_2} /> */}
-            <CloseIcon className="close-icon" onClick={() => setModel(false)} />
-            {/* <NavLink exact to={`/projects/${index}`} className="btn btn-primary">
+        </>
+      ))}
+      <div className={model ? "model open" : "model"}>
+        <Projects selectedProject={selectedIndex} />;
+        <CloseIcon className="close-icon" onClick={() => setModel(false)} />
+        {/* <NavLink exact to={`/projects/${index}`} className="btn btn-primary">
             Teste 03
             <PhotoLibraryIcon />
           </NavLink> */}
-          </div>
-        </>
-      ))}
+      </div>
     </div>
   );
 }

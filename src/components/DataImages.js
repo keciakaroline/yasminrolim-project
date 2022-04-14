@@ -1,7 +1,10 @@
 const dataImages = {
   project_1: {
-    p1_1: require("../images/FaceImages/p1_1.jpg"),
-    p1_2: require("../images/p1/p1_2.jpg"),
+    images: {
+      p1_1: require("../images/FaceImages/p1_1.jpg"),
+      p1_2: require("../images/p1/p1_2.jpg"),
+    },
+    text: "project 01",
   },
   project_2: {
     p2_1: require("../images/FaceImages/p2_1.jpg"),
