@@ -7,7 +7,7 @@ import "./styles/Homepage.css";
 
 export default function Homepage() {
   return (
-    <div className="Homepage">
+    <div className="Homepage container-fluid">
       <header>
         <img src={profile} alt="Yasmin Rolim Profile" />
         <h1>Yasmin Rolim</h1>
