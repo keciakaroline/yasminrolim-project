@@ -1,12 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import CloseIcon from "@mui/icons-material/Close";
-import PhotoLibraryIcon from "@mui/icons-material/PhotoLibrary";
-import { NavLink } from "react-router-dom";
 import "./styles/Presentation.css";
 import Projects from "./Projects";
-// import dataImages from "./DataImages";
-// import "react-image-gallery/styles/css/image-gallery.css";
-// import ImageGallery from "react-image-gallery";
 
 function importAll(r) {
   let images = {};
@@ -45,17 +40,13 @@ export default function Presentation() {
             src={images[index]}
             alt=""
             onClick={() => getImg(index)}
-            className="img-fluid"
+            className="img-fluid grid-image"
           />
         </>
       ))}
       <div className={model ? "model open" : "model"}>
         <Projects selectedProject={selectedIndex} />;
         <CloseIcon className="close-icon" onClick={() => setModel(false)} />
-        {/* <NavLink exact to={`/projects/${index}`} className="btn btn-primary">
-            Teste 03
-            <PhotoLibraryIcon />
-          </NavLink> */}
       </div>
     </div>
   );
