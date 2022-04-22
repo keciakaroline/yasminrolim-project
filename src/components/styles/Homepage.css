@@ -4,7 +4,8 @@
   background-repeat: round;
   width: 100%;
   height: 100%;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 header {
@@ -34,16 +35,17 @@ header img {
 
 @media (max-width: 900px) {
   .Homepage {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 0px;
+    padding-right: 0px;
   }
+
   header img {
     width: 150px;
     height: 150px;
     margin-bottom: 10px;
   }
   header {
-    padding-bottom: 100px;
+    padding-bottom: 80px;
   }
 
   .Homepage h1 {
