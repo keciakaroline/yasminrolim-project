@@ -1,6 +1,4 @@
 import React, { useState, useEffect, useCallback } from "react";
-import CodeBy from "./CodeBy";
-import { NavLink } from "react-router-dom";
 import "./styles/Projects.css";
 
 function importAll(r) {
@@ -44,21 +42,24 @@ export default function Projects({ selectedProject }) {
   );
   //console.log(projImages, selectedImage);
   return (
-    <div id="projects">
-      <img src={projImages[selectedImage]} alt="" className="big-image" />
+    <div id="projects" className="Projects">
+      <img
+        src={projImages[selectedImage]}
+        alt=""
+        className="img-fluid big-image"
+      />
 
-      <div className="Projects">
+      <div className="Inner-projects">
         {Object.keys(projImages).map((index) => (
-          <img
-            src={projImages[index]}
-            alt=""
-            className="img-fluid"
-            onClick={() => getImg(index)}
-          />
+          <div>
+            <img
+              src={projImages[index]}
+              alt=""
+              className="img-fluid small-image"
+              onClick={() => getImg(index)}
+            />
+          </div>
         ))}
-        {/* <NavLink exact to={`/`} className="btn btn-primary">
-        Voltar
-      </NavLink> */}
       </div>
     </div>
   );
