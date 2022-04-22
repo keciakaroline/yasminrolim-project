@@ -1,0 +1,69 @@
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+.Contact {
+  padding-top: 100px;
+  background-image: url(https://img.freepik.com/fotos-gratis/textura-de-marmore-branca-do-panorama-para-o-projeto-decorativo-do-fundo-ou-do-assoalho-de-telhas_42682-513.jpg?w=2000);
+  background-repeat: round;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: aliceblue;
+}
+
+.Contact h1 {
+  font-weight: 700;
+  letter-spacing: 8px;
+  font-size: 50px;
+  line-height: 80px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #1e2222;
+  text-decoration: underline;
+}
+
+.Contact .contact-link {
+  border-radius: 20px;
+  background-color: #1e2222;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 30px 15px;
+  width: 300px;
+  height: 150px;
+  align-items: center;
+}
+
+ul {
+  padding: 0px;
+}
+
+ul a {
+  text-align: center;
+  align-items: center;
+  color: rgb(242, 224, 65) !important;
+  text-decoration: none;
+  transition: all 100ms ease-in-out;
+}
+
+ul a:hover {
+  color: rgba(212, 89, 40, 0.7) !important;
+  opacity: 70%;
+  cursor: pointer;
+}
+@media (max-width: 900px) {
+  .Contact h1 {
+    font-size: 40px;
+    margin-bottom: 50px;
+    margin-top: -30px;
+    color: #1e2222;
+  }
+
+  .Contact .contact-link {
+    margin-bottom: 15px;
+    padding: 30px 15px;
+    width: 250px;
+    height: 120px;
+  }
+}
