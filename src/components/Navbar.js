@@ -36,17 +36,6 @@ export default function Navbar() {
               <li className="nav-item">
                 <NavLink
                   exact
-                  to="/projects"
-                  className="nav-link"
-                  onClick={click ? handleClick : null}
-                  activeClassName="active"
-                >
-                  Projetos
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  exact
                   to="/sobre"
                   className="nav-link"
                   onClick={click ? handleClick : null}
