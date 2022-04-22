@@ -35,3 +35,24 @@ body {
   border-top-left-radius: 60px;
   border-bottom-left-radius: 60px;
 }
+
+@media (max-width: 900px) {
+  .Sobre .container-fluid {
+    margin-top: -30px;
+    margin-bottom: 50px;
+    padding: 0px 5px;
+  }
+
+  .Sobre h1 {
+    font-size: 40px;
+  }
+
+  .texto {
+    margin: 30px 30px;
+  }
+
+  .Sobre img {
+    width: auto;
+    height: auto;
+  }
+}

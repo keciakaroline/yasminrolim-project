@@ -8,7 +8,7 @@ export default function Sobre() {
     <div className="Sobre">
       <div className="container-fluid">
         <div className="row">
-          <div className="col-6">
+          <div className="col-lg-6">
             <h1>Yasmin Rolim</h1>
             <div className="texto">
               <p>
@@ -37,8 +37,8 @@ export default function Sobre() {
               </p>
             </div>
           </div>
-          <div className="col-6">
-            <img src={profile_2} alt="" />
+          <div className="col-lg-6">
+            <img src={profile_2} alt="" className="img-fluid" />
           </div>
         </div>
       </div>
