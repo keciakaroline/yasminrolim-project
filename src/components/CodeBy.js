@@ -13,7 +13,11 @@ export default function CodeBy() {
         Kécia Santos
       </a>{" "}
       and is{" "}
-      <a href="/" target="_blank" rel="noreferrer">
+      <a
+        href="https://github.com/keciasantos/yasminrolim-gallery-project"
+        target="_blank"
+        rel="noreferrer"
+      >
         open-sourced on GitHub
       </a>{" "}
       and hosted on{" "}
