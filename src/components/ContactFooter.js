@@ -4,9 +4,9 @@ import "./styles/ContactFooter.css";
 
 export default function ContactFooter() {
   return (
-    <div className="ContactFooter">
+    <div className="ContactFooter container-fluid">
       <p>
-        Entre em contato e vamos conversar sobre aquele projeto que voce sempre
+        Entre em contato e vamos conversar sobre aquele projeto que você sempre
         quis!
       </p>
       <Link to="/contact">Clique aqui!</Link>

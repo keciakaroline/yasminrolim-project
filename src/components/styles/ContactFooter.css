@@ -31,3 +31,27 @@
 .ContactFooter a:hover {
   color: rgba(217, 79, 25, 0.7);
 }
+
+@media (max-width: 900px) {
+  .ContactFooter {
+    padding-top: 30px;
+    padding-bottom: 15px;
+    margin-top: 20px;
+  }
+
+  .ContactFooter p {
+    font-size: 20px;
+    border-radius: 7px;
+    border: 1px solid #1e2222;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+
+  .ContactFooter a {
+    font-size: 18px;
+    font-family: "Lobster", cursive;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: rgb(242, 224, 65);
+  }
+}
