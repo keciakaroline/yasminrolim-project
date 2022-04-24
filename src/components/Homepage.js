@@ -1,6 +1,5 @@
 import React from "react";
 import profile from "../images/yasmin-profile-2.png";
-import CodeBy from "./CodeBy";
 import Presentation from "./Presentation";
 import ContactFooter from "./ContactFooter";
 import "./styles/Homepage.css";
@@ -15,7 +14,6 @@ export default function Homepage() {
       </header>
       <Presentation />
       <ContactFooter />
-      <CodeBy />
     </div>
   );
 }

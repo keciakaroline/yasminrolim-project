@@ -12,15 +12,7 @@ export default function CodeBy() {
       >
         Kécia Santos
       </a>{" "}
-      and is{" "}
-      <a
-        href="https://github.com/keciasantos/yasminrolim-gallery-project"
-        target="_blank"
-        rel="noreferrer"
-      >
-        open-sourced on GitHub
-      </a>{" "}
-      and hosted on{" "}
+      hosted on{" "}
       <a href="https://www.netlify.com/" target="_blank" rel="noreferrer">
         Netlify.
       </a>
