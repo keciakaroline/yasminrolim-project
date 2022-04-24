@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./styles/ContactFooter.css";
 import CodeBy from "./CodeBy";
 
@@ -12,9 +12,14 @@ export default function ContactFooter() {
           sempre quis!
         </p>
 
-        <button className="btn btn-contato">
-          <Link to="/contact">Clique aqui!</Link>
-        </button>
+        <NavLink
+          exact
+          to="/contato"
+          className="btn btn-contato"
+          activeClassName="active"
+        >
+          Clique aqui!
+        </NavLink>
       </div>
       <div className="code">
         <CodeBy />
